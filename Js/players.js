@@ -47,8 +47,8 @@ function AddPlaperPanel(data){
                       </div>
                       
                   </div>
-                  <div class="absolute  flip-card-back top-0  h-full w-full  cursor-pointer ">
-                    <div class="relative"  onclick='OpenFormPanel(0,${item.id})'>
+                  <div class="absolute  flip-card-back top-0  h-full w-full   cursor-pointer ">
+                    <div class="relative">
                         <svg class="" viewBox="0 0 252 346" fill="#181717" xmlns="http://www.w3.org/2000/svg">
                             <path d="M175.972 310.77C175.972 310.77 135.032 306.807 126.287 329C120.723 310.77 90.5147 311.166 82.5652 310.77C74.6157 310.374 21.7516 314.733 22.5465 283.029C20.9567 265.592 23.3414 71.4042 23.3414 67.4412C45.9975 64.6671 71.4359 43.2668 83.7576 40.4927C96.0793 37.7186 100.452 37.7186 100.452 37.7186C100.452 37.7186 104.029 45.6446 111.978 45.6446C119.928 45.6446 126.287 29 126.287 29C126.287 29 134.237 45.2483 141.789 45.6446C149.341 46.041 151.726 37.7186 151.726 37.7186C151.726 37.7186 162.06 37.7186 171.6 40.4927C181.139 43.2668 203.795 62.2893 229.631 69.0264C229.631 72.5931 229.234 225.962 229.631 283.029C235.196 310.77 175.972 310.77 175.972 310.77Z" stroke="#A2A2A2" stroke-width="2"/>
                             <defs>
@@ -58,7 +58,7 @@ function AddPlaperPanel(data){
                             </linearGradient>
                             </defs>
                           </svg>
-                              <div class="absolute top-8 text-[8px] text-white flex justify-center gap-4 w-full  p-1">
+                              <div onclick='OpenFormPanel(0,${item.id})' class="absolute top-8 text-[8px] text-white flex justify-center gap-4 w-full  p-1">
                                     <div class="flex flex-col gap-1">
      
                                         <p class="grid grid-cols-[1fr]">
@@ -95,7 +95,7 @@ function AddPlaperPanel(data){
                                              px-[2px] py-[2px]">${item?.passing ?? item.reflexes}</span>
                                         </p>
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Dribbling : </span> 
+                                             <span>Dribbling : </span> 
                                             <span class="border-[2px] rounded-full 
                                                 border-${(item?.defending ?? item.positioning)>=90 ? 'green-400' : (item?.defending ?? item.positioning)>=60 ?'yellow-400' : 'red-400' }
                                             px-[2px] py-[2px]">${item?.dribbling ?? item.speed}</span>
@@ -162,8 +162,15 @@ let imageFile = null ;
 
 function AddPlayer(event){
   event.preventDefault();
-  const PlayerData = {
-      id : AllPlayersLis.length +1 ,
+  let LocalId = parseInt(localStorage.getItem('lastid')) || 0
+  if (!LocalId) {
+    localStorage.setItem('lastid', parseInt(AllPlayersLis.length));
+    LocalId = parseInt(AllPlayersLis.length) + 1;
+  } else {
+    localStorage.setItem('lastid', ++LocalId); 
+  }
+    const PlayerData = {
+      id: LocalId ,
       name : document.getElementById("txtplayerName")?.value ,
       photo : "",
       cover : document.querySelector("#CoverCombo")?.value ,
@@ -300,7 +307,6 @@ async function UploadImgOnImgBB(PlayerData , mode /* 0 in case add player other 
 }
 
 
-
 function OpenFormPanel(id , mode){
 
   if(document.getElementById("FormPanel").getAttribute('isopned') == 'true' && id !=0){
@@ -335,7 +341,6 @@ function OpenFormPanel(id , mode){
   document.getElementById('uploadedit').classList.add('hidden'),
   document.getElementById('uploadadd').classList.remove('hidden')
 )
-
   if(mode != -1){
     IdCArdPlaterSelected = mode
 
@@ -387,12 +392,12 @@ function OpenFormPanel(id , mode){
     PlayerData.physical.value = playerPikced.physical
 
     const inputRange = ['Rating' ,'Pace','Shooting','Passing','Defending','Dribbling','Physical'] 
-    document.getElementById(inputRange[0]+"Display").textContent = `${inputRange[0]} (${playerPikced.rating}):`;
-    document.getElementById(inputRange[1]+"Display").textContent = `${inputRange[1]} (${playerPikced.pace}):`;
-    document.getElementById(inputRange[2]+"Display").textContent = `${inputRange[2]} (${playerPikced.shooting}):`;
-    document.getElementById(inputRange[3]+"Display").textContent = `${inputRange[3]} (${playerPikced.dribbling}):`;
-    document.getElementById(inputRange[4]+"Display").textContent = `${inputRange[4]} (${playerPikced.defending}):`;
-    document.getElementById(inputRange[4]+"Display").textContent = `${inputRange[4]} (${playerPikced.physical}):`;
+    document.getElementById(inputRange[0]+"Display").textContent = `${inputRange[0]} (${playerPikced?.rating}):`;
+    document.getElementById(inputRange[1]+"Display").textContent = `${playerPikced?.pace ?  inputRange[1] :'Diving'} (${playerPikced?.pace ?? playerPikced?.diving}):`;
+    document.getElementById(inputRange[2]+"Display").textContent = `${playerPikced?.shooting ? inputRange[2]:'Handling'} (${playerPikced?.shooting ?? playerPikced?.handling}):`;
+    document.getElementById(inputRange[3]+"Display").textContent = `${playerPikced?.dribbling ? inputRange[3]:'Kicking'} (${playerPikced?.dribbling ?? playerPikced?.kicking}):`;
+    document.getElementById(inputRange[4]+"Display").textContent = `${playerPikced?.defending ? inputRange[4]:'Reflexes'} (${playerPikced?.defending ?? playerPikced?.reflexes}):`;
+    document.getElementById(inputRange[4]+"Display").textContent = `${ playerPikced?.physical ? inputRange[4]:'Speed'} (${playerPikced?.physical ?? playerPikced?.speed}):`;
   }
 }
  

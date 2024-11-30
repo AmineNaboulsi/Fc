@@ -245,12 +245,10 @@ function PickedPlayer(playerObject , pn ,id,isOnterain){
                         <img id="imgplayer${id}" class="absolute left-10 w-16 top-6" src="${playerObject?.photo}" alt="" />
                         <div class="absolute left-4 right-4 top-[88px]  text-[0.6rem] flex flex-col justify-center items-center text-center">
                             <h2 class="${playerObject.rating>85 && (playerObject.position != "GK" &&'text-[#FFD972]')} font-bold" id="playername${id}" class="">${playerObject?.name}</h2>
-                            
                             <div class="flex flex-col items-center">
                                 <span id="playerclub${id}" class="${playerObject.rating>85 && (playerObject.position != "GK" &&'text-[#FFD972]')} text-[0.5rem]">${playerObject?.club}</span>
                                 <img id="imgclub${id}" class="w-4" alt="" src="${playerObject?.logo}" />
                             </div>
-                            
                         </div>
             `
             document.getElementById("subpanel").appendChild(element) ;
@@ -322,7 +320,7 @@ function getPlayerInfo(playerObject){
                                             
                                             </p>
                                          <p class="grid grid-cols-[auto]">
-                                            <span>Pace : </span>
+                                            <span>${(playerObject?.pace ?'Pace' : 'Diving')}  : </span>
                                             <div class="rounded-full  bg-gray-600 " >
                                                 <div class="rounded-full 
                                                 bg-${(playerObject?.pace ?? playerObject.diving)>=90 ? 'green-400' : (playerObject?.pace ?? playerObject.diving)>=60 ?'yellow-400' : 'red-400' }
@@ -332,7 +330,7 @@ function getPlayerInfo(playerObject){
                                             
                                         </p>
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Shooting : </span> 
+                                            <span>${(playerObject?.Shooting ?'Shooting' : 'Handling')} : </span> 
                                             <div class="rounded-full  bg-gray-600 " >
                                                 <div class="rounded-full 
                                                 bg-${(playerObject?.shooting ?? playerObject.handling)>=90 ? 'green-400' : (playerObject?.shooting ?? playerObject.handling)>=60 ?'yellow-400' : 'red-400' }
@@ -340,7 +338,7 @@ function getPlayerInfo(playerObject){
                                             </div>
                                         </p>
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Physical : </span> 
+                                            <span>${(playerObject?.physical ?'Physical' : 'Kicking')}  : </span> 
                                              <div class="rounded-full  bg-gray-600 " >
                                                <div class="rounded-full 
                                                 bg-${(playerObject?.physical ?? playerObject.kicking)>=90 ? 'green-400' : (playerObject?.physical ?? playerObject.kicking)>=60 ?'yellow-400' : 'red-400' }
@@ -351,7 +349,7 @@ function getPlayerInfo(playerObject){
                                     <div class="flex flex-col gap-1">
                                    
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Passing : </span> 
+                                            <span>${(playerObject?.passing ?'Passing' : 'Reflexes')} : </span> 
                                              <div class="rounded-full  bg-gray-600 " >
                                                 <div class="rounded-full 
                                                 bg-${(playerObject?.passing ?? playerObject.reflexes)>=90 ? 'green-400' : (playerObject?.passing ?? playerObject.reflexes)>=60 ?'yellow-400' : 'red-400' }
@@ -359,7 +357,7 @@ function getPlayerInfo(playerObject){
                                             </div>
                                             </p>
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Dribbling : </span> 
+                                            <span>${(playerObject?.dribbling ?'Dribbling' : 'Speed')} : </span> 
                                              <div class="rounded-full  bg-gray-600 " >
                                                 <div class="rounded-full 
                                                 bg-${(playerObject?.dribbling ?? playerObject.speed)>=90 ? 'green-400' : (playerObject?.dribbling ?? playerObject.speed)>=60 ?'yellow-400' : 'red-400' }
@@ -367,7 +365,7 @@ function getPlayerInfo(playerObject){
                                             </div>
                                             </p>
                                         <p class="grid grid-cols-[1fr]">
-                                            <span>Defending : </span> 
+                                            <span>${(playerObject?.defending ?'Defending' : 'Positioning')}  : </span> 
                                             <div class="rounded-full  bg-gray-600 " >
                                                 <div class="rounded-full 
                                                 bg-${(playerObject?.defending ?? playerObject.positioning)>=90 ? 'green-400' : (playerObject?.defending ?? playerObject.positioning)>=60 ?'yellow-400' : 'red-400' }
