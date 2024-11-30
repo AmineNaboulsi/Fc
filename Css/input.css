@@ -43,6 +43,7 @@ header{
     rotateX(40deg) ;
   }
 }
+
 .terain {
   width: 892px;
   height: 731px;
@@ -56,8 +57,14 @@ header{
    rotateX(40deg) ;
   transition: transform 1s, opacity 0.5s; 
   animation: displayloading 1s;
+
+
+
   /* background-color: #39337bdf; */
 }
+
+
+
 /* .terain:hover{
   transform: rotateX(200deg) ;
 
@@ -147,11 +154,14 @@ header{
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg) scale(1.2);
 }
+
+
 
 .flip-card-front, .flip-card-back {
   position: absolute;

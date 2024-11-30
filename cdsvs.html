@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container flex" id="dvsd" >
+
+    </div>
+    <script>
+           fetch('./Data/card.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach((element) => {
+                    const card = document.createElement("div");
+                    const img = document.createElement("img");
+                    const text = document.createElement("span");
+                    img.setAttribute("src" ,""+element.img )
+                    text.textContent = ""+element.name;
+                    card.appendChild(img)
+                    card.appendChild(text)  
+                    document.getElementById("dvsd").append(card);
+
+                });
+
+            }).catch((error)=>{
+                alert(error)
+            });
+    </script>
+</body>
+</html>

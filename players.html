@@ -40,7 +40,7 @@
                 <div class="px-8 max-xl:px-3 pb-4 border-b-[1px] flex justify-between items-center ">
                     <h2 class="text-xl text-white " border-gray-400>Players</h2>
 
-                    <div onclick="OpenFormPanel()" class="cursor-pointer text-gray-50 rounded-md bg-[#6158CA] px-3 py-2 max-xl:py-1 flex justify-center items-center gap-2">
+                    <div onclick="OpenFormPanel(1 , -1)" class="cursor-pointer text-gray-50 rounded-md bg-[#6158CA] px-3 py-2 max-xl:py-1 flex justify-center items-center gap-2">
                         <i class="fa-solid fa-plus"></i>
                         <span>Add Player</span>
                     </div> 
@@ -50,14 +50,14 @@
                     <div id="playerslist" class="flex flex-wrap h-[100%] ">
                         
                     </div>
-                    <form id="FormPanelEdit" action="" class="relative hidden" >
+                    <form id="FormPanelEdit" action="" class="max-xl:fixed max-md:inset-7 max-xl:top-[20%] max-xl:left-7 max-xl:right-7  hidden" >
                         <div id="progressloading" class='h-1.5 w-full hidden overflow-hidden'>
                             <div class='progress w-full h-full bg-[#6158CA] left-right'></div>
                           </div>
                         <div id="panleform" class="flex justify-center py-3 h-full  mx-5 ">
-                            <div class="max-xl:fixed max-md:inset-7 max-xl:top-[20%] max-xl:left-7 max-xl:right-7 max-xl:bg-[#fff]  max-xl:rounded-md max-xl:border-[1px]  max-xl:border-white overflow-y-auto">
-                                <div class="p-3">
-                                    <div class="relative w-full border-[1px] max-xl:border-black border-dashed rounded-md flex flex-col justify-center px-5 py-3 items-center">
+                            <div class="max-xl:rounded-md max-xl:border-[1px]  max-xl:border-white overflow-y-auto">
+                                <div class="p-3 max-xl:bg-[#fff]">
+                                    <div id="uploadadd" class="  relative w-full border-[1px] max-xl:border-black border-dashed rounded-md flex flex-col justify-center px-5 py-3 items-center">
                                         <i class="fa-solid fa-image text-blue-400 text-3xl"></i>
                                         <h4 class="text-gray-50 max-xl:text-black font-semibold text-md">Drag & Drop</h4>
                                         <div class="flex gap-2 items-center">
@@ -70,7 +70,12 @@
     
                                         <h2 id="imagepanelR" class="text-2xl text-red-600 absolute top-2 right-5"></h2>
                                     </div>
-        
+                                    <div id="uploadedit" class=" hidden relative text-white w-full border-[1px] max-xl:border-black border-dashed rounded-md flex flex-col justify-center px-5 py-3 items-center">
+                                        <img id="updateimg" class="h-10" alt  />
+                                        <input class="my-2 text-gray-50 max-xl:text-black"
+                                            accept="image/png, image/jpg, image/jpeg"
+                                            type="file" id="fileInput" multiple />
+                                    </div>
                                     <div class="relative grid gap-[10px] mt-2 text-white  max-xl:text-black">
                                         <div class="grid grid-cols-[80px,1fr]  items-center">
                                             <span >
@@ -86,7 +91,7 @@
                                                     <span> Flag : </span>
                                                     <span class="text-red-500" id="textflaglabel"></span>
                                                 </span>
-                                                    <select id="FlagCombo" placeholder="Select an option...">
+                                                    <select id="FlagCombo" placeholder="Select Flag ...">
                                                    </select>
                                             </div>
                                             <div class="grid grid-cols-[80px,1fr] items-center">
@@ -95,7 +100,7 @@
                                                     <span> Club : </span>
                                                     <span class="text-red-500" id="textClublabel"></span>
                                                 </span>
-                                                  <select id="ClubCombo" placeholder="Select an option...">
+                                                  <select id="ClubCombo" placeholder="Select Club ...">
                                                   </select>
     
                                             </div>
@@ -106,7 +111,7 @@
                                                 <span> Cover : </span>
                                                 <span class="text-red-500" id="textcoverlabel"></span>
                                             </span>
-                                            <select id="CoverCombo" placeholder="Select an option...">
+                                            <select id="CoverCombo" placeholder="Select Cover ...">
                                             </select>
                                         </div>
                                         <div class="grid grid-cols-[80px,1fr] items-center">
@@ -148,33 +153,33 @@
     
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="RatingDisplay">Rating (10) : </span>
-                                                    <input id="RangePlayerRating" type="range" min="10" max="99" value="10">  
+                                                    <input id="RangePlayerRating" type="range" min="10" max="99">  
                                                 </div>
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="PaceDisplay">Pace  (10) : </span>
-                                                    <input id="RangePlayerPace"  type="range" min="10" max="99" value="10">
+                                                    <input id="RangePlayerPace"  type="range" min="10" max="99" >
                                                 </div>
                                             </div>
                                             <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
     
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="ShootingDisplay">Shooting  (10) : </span>
-                                                    <input  id="RangePlayerShooting" type="range"  min="10" max="99" value="10">
+                                                    <input  id="RangePlayerShooting" type="range"  min="10" max="99">
                                                 </div>
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="PassingDisplay" >Passing  (10) : </span>
-                                                    <input id="RangePlayerPassing" type="range" min="10" max="99" value="10">
+                                                    <input id="RangePlayerPassing" type="range" min="10" max="99" >
                                                 </div>
                                             </div>
                                             <div class="grid grid-cols-2 max-md:grid-cols-1 gap-4">
     
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="DribblingDisplay">Dribbling  (10) : </span>
-                                                    <input id="RangePlayerDribbling" type="range" min="10" max="99" value="10">
+                                                    <input id="RangePlayerDribbling" type="range" min="10" max="99" >
                                                 </div>
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="DefendingDisplay">Defending  (10) : </span>
-                                                    <input id="RangePlayerDefending" type="range"  min="10" max="99" value="10">
+                                                    <input id="RangePlayerDefending" type="range"  min="10" max="99" >
         
                                                 </div>
                                             </div>
@@ -182,16 +187,17 @@
     
                                                 <div class="grid grid-cols-[120px,1fr] items-center">
                                                     <span id="PhysicalDisplay">Physical  (10) : </span>
-                                                    <input  id="RangePlayerPhysical" type="range" min="10" max="99" value="10">
+                                                    <input  id="RangePlayerPhysical" type="range" min="10" max="99" >
                                                 </div>
                                                 <div class="grid grid-cols-1 max-xl:grid-cols-2 max-xl:gap-2">
                                                     <button type="submit" onclick="ClosePopPUPFormulaire(event)" 
-                                                        class="absolute max-xl:static max-xl:w-full right-0 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#f72d2d] " >
-                                                        <i class="fa-solid fa-xmark"></i><span class="ml-2">Cancel</span>
+                                                        class="absolute max-xl:static max-xl:w-full right-14 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#f72d2d] " >
+                                                        <i class="fa-solid fa-xmark"></i>
+                                                        
                                                     </button>
-                                                    <button type="submit" onclick="AddPlayer(event)" 
-                                                    class="absolute max-xl:static max-xl:w-full right-0 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#6158CA]  " >
-                                                    <i class="fa-solid fa-floppy-disk"></i><span class="ml-2">Save</span>
+                                                    <button id="formsubmitbtn" type="submit" onclick="AddPlayer(event)" 
+                                                        class="absolute max-xl:static max-xl:w-full right-0 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#6158CA]  " >
+                                                        <i class="fa-solid fa-floppy-disk"></i>
                                                     </button>
                                                     
                                                 </div>
@@ -225,5 +231,6 @@
     <script type="module">
         import imglybackgroundRemovalNode from 'https://cdn.jsdelivr.net/npm/@imgly/background-removal-node@1.4.5/+esm'
         </script>
+    
 </body>
 </html>

@@ -36,7 +36,38 @@
     <div class="text-center">
         <h1 class="text-gray-400 text-3xl m-12">Make Your Dream Football Team</h1>
 
+        <select id="CoverCombo" placeholder="Select Cover ...">
+        </select>
+
     </div>
+    <script>
+
+        const CoverCombo = new TomSelect('#CoverCombo',{
+        valueField: 'name',
+        searchField: 'name',
+        render: {
+            option: function(item, escape) {
+            return `<div class="custom-option grid grid-cols-[auto,1fr] gap-3 items-center">
+                <img class="h-4 w-4" src="${item.img}" >
+                <span>${item.name}</span>
+                </div>`;
+            },
+            item: function(item, escape) {
+            return `<div id="Flaginput" class="custom-option grid grid-cols-[auto,1fr] gap-3 items-center">
+                <img class="h-4 w-4" src="${item.img}" >
+                <span>${item.name}</span>
+                </div>`;
+            }
+        },
+        });
+
+        fetch('./Data/teams.json')
+        .then(response => response.json())
+        .then(data => {
+            ClubCombo.addOptions(data);
+        })
+
+    </script>
     <script src="https://kit.fontawesome.com/ff84f079ef.js" crossorigin="anonymous"></script>
 </body>
 </html>

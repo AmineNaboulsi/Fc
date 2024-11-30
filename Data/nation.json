@@ -24,7 +24,7 @@
     "name":"Belarus"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/7.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=d637d192ddd27cedb47b9fe38b6ff092",
+       "img":"https://cdn.sofifa.net/flags/be.png",
     "name":"Belgium"
   },
   {
@@ -36,7 +36,7 @@
     "name":"Bulgaria"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/10.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=e9e638ef1ccc508be6ac23d7accd7d51",
+       "img":"https://cdn.sofifa.net/flags/hr.png",
     "name":"Croatia"
   },
   {
@@ -52,7 +52,7 @@
     "name":"Denmark"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/14.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=fd61715cd36adf0e87e417376744e767",
+       "img":"https://cdn.sofifa.net/flags/gb-eng.png",
     "name":"England"
   },
   {
@@ -68,7 +68,7 @@
     "name":"Finland"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/18.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=bd9eba980ba90765f27a4aa02dd6616b",
+       "img":"https://cdn.sofifa.net/flags/fr.png",
     "name":"France"
   },
   {
@@ -80,7 +80,7 @@
     "name":"Georgia"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/21.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=42c065e704f86661f1e53e69f7c4c415",
+       "img":"https://cdn.sofifa.net/flags/de.png",
     "name":"Germany"
   },
   {
@@ -96,7 +96,7 @@
     "name":"Iceland"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/25.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b944eadc2fab5579f25fda209ea4b76b",
+    "img":"https://cdn3.futbin.com/content/fifa25/img/nation/25.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b944eadc2fab5579f25fda209ea4b76b",
     "name":"Republic of Ireland"
   },
   {
@@ -104,7 +104,7 @@
     "name":"Israel"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/27.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=86ed5c0426dd4728eb366fae1b6e2bf5",
+       "img":"https://iili.io/2ctQ3PI.png",
     "name":"Italy"
   },
   {
@@ -132,7 +132,7 @@
     "name":"Moldova"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/34.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=1a28c3cc36f06d6d0b693491832ba1ea",
+       "img":"https://cdn.sofifa.net/flags/nl.png",
     "name":"Netherlands"
   },
   {
@@ -140,7 +140,7 @@
     "name":"Northern Ireland"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/36.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=1d57e79156ce40aebf543851a8b7f6fe",
+       "img":"https://cdn.sofifa.net/flags/no.png",
     "name":"Norway"
   },
   {
@@ -148,7 +148,7 @@
     "name":"Poland"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/38.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=f9463fd3973965923de9e8945e9ca0fe",
+       "img":"https://cdn.sofifa.net/flags/pt.png",
     "name":"Portugal"
   },
   {
@@ -172,7 +172,7 @@
     "name":"Slovakia"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/44.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=2b72a3412f78e5927ab87b1d26d73b33",
+       "img":"https://iili.io/2ctQ3PI.png",
     "name":"Slovenia"
   },
   {
@@ -204,7 +204,7 @@
     "name":"Serbia"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/52.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b29d36ad91598e91ddb6df42d6ca9e61",
+       "img":"https://cdn.sofifa.net/flags/ar.png",
     "name":"Argentina"
   },
   {
@@ -212,7 +212,7 @@
     "name":"Bolivia"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/54.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=e72661524091637c5a0af73ee673d214",
+       "img":"https://cdn.sofifa.net/flags/br.png",
     "name":"Brazil"
   },
   {
@@ -276,7 +276,7 @@
     "name":"British Virgin Islands"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/70.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=b669d320a6dc0c95f8b2c5a2eb62643d",
+       "img":"https://cdn.sofifa.net/flags/ca.png",
     "name":"Canada"
   },
   {
@@ -440,7 +440,7 @@
     "name":"Congo DR"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/111.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=4e6dad8c0fbef20b3373bff4db547c98",
+       "img":"https://cdn.sofifa.net/flags/eg.png",
     "name":"Egypt"
   },
   {
@@ -512,7 +512,7 @@
     "name":"Mauritius"
   },
   {
-       "img":"https://cdn3.futbin.com/content/fifa25/img/nation/129.png?fm=png&amp;ixlib=java-2.1.0&amp;w=70&amp;s=56f38d66949b18ce67a52a455dd29451",
+       "img":"https://cdn.sofifa.net/flags/ma.png",
     "name":"Morocco"
   },
   {
