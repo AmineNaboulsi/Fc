@@ -190,15 +190,22 @@
                                                     <input  id="RangePlayerPhysical" type="range" min="10" max="99" >
                                                 </div>
                                                 <div class="grid grid-cols-1 max-xl:grid-cols-2 max-xl:gap-2">
-                                                    <button type="submit" onclick="ClosePopPUPFormulaire(event)" 
-                                                        class="absolute max-xl:static max-xl:w-full right-14 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#f72d2d] " >
+                                                    
+                                                    <button type="submit" onclick="DeletePlayer(event)" 
+                                                        class="absolute max-xl:static max-xl:w-full -bottom-1 right-14 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#f72d2d] " >
                                                         <i class="fa-solid fa-xmark"></i>
                                                         
                                                     </button>
+                                                    
                                                     <button id="formsubmitbtn" type="submit" onclick="AddPlayer(event)" 
-                                                        class="absolute max-xl:static max-xl:w-full right-0 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#6158CA]  " >
+                                                        class="absolute max-xl:static max-xl:w-full -bottom-1  right-0 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-[#6158CA]  " >
                                                         <i class="fa-solid fa-floppy-disk"></i>
                                                     </button>
+                                                    <button type="submit" onclick="ClosePopPUPFormulaire(event)" 
+                                                    class="absolute max-xl:static max-xl:col-span-2 max-xl:w-full -bottom-1  right-18 flex justify-center items-center h-11 w-11 text-sm py-1 rounded-full max-xl:rounded-sm text-white bg-gray-400 " >
+                                                    <i class="fa-solid fa-arrow-left"></i>
+                                                </button>
+                                                  
                                                     
                                                 </div>
                                                 

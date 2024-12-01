@@ -28,7 +28,7 @@ function AddPlaperPanel(data){
     data && data.forEach((item , i)=>{
             PlayerCards += `
               
-        <div class="flip-card">
+        <div class="flip-card" onclick='OpenFormPanel(0,${item.id})' >
          
             <div class="flip-card-inner">
             
@@ -58,7 +58,7 @@ function AddPlaperPanel(data){
                             </linearGradient>
                             </defs>
                           </svg>
-                              <div onclick='OpenFormPanel(0,${item.id})' class="absolute top-8 text-[8px] text-white flex justify-center gap-4 w-full  p-1">
+                              <div class="absolute top-8 text-[8px] text-white flex justify-center gap-4 w-full  p-1">
                                     <div class="flex flex-col gap-1">
      
                                         <p class="grid grid-cols-[1fr]">
@@ -191,7 +191,12 @@ function AddPlayer(event){
         UploadImgOnImgBB(PlayerData , 0);
   } 
 }
-
+function DeletePlayer(event){
+  event.preventDefault( )
+    AllPlayersLis = AllPlayersLis.filter((element) => element.id != IdCArdPlaterSelected ) 
+    localStorage.setItem('ArrayPlayersData' , JSON.stringify(AllPlayersLis))
+    Display_All_Players(true)
+}
 
 function checkfiledrequied(PlayerData , mode){
   let Findtrouble = false
@@ -224,7 +229,6 @@ input.forEach((input)=>{
     // console.log(event)
     if (file) {
         imageFile = file;   
-        // console.log("File selected:", file.name);//ghir name
     }
 });
 })
@@ -233,7 +237,7 @@ input.forEach((input)=>{
 async function UploadImgOnImgBB(PlayerData , mode /* 0 in case add player other like 1 in update */){
 
   const apiKey = "3831af7143a217e46e098a7018fb2522";
-  //We have to make in it the env file to make it more secure lmohim 9di o 3adi
+  //We have to make in the env file to make it more secure lmohim 9di o 3adi
 
   if(imageFile != null){
     window.width > 1000 &&  (document.getElementById("panleform").style.opacity = '0.5') ;
@@ -446,6 +450,10 @@ function ClosePopPUPFormulaire(e){
   input.forEach((fileInput)=>fileInput.value = "")
     
   IdCArdPlaterSelected = -1 ;
+
+  FlagCombo.clear();
+  ClubCombo.clear();
+  CoverCombo.clear();
 
 }
 
