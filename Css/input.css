@@ -141,6 +141,26 @@ header{
 
 }
 
+#coverbg{
+  transition: all 0.5s;
+  animation: bgcovzer 5s infinite ;
+}
+
+@keyframes bgcovzer {
+  0% {
+      box-shadow: 1px 1px 40px #848484;
+  }
+  30% {
+    box-shadow: 1px 1px 40px #8484848a;
+  }
+  60% {
+    box-shadow: 1px 1px 40px #84848400;
+  }
+  100% {
+    box-shadow: 1px 1px 40px #8484848a;
+  }
+}
+
 
 .flip-card {
   background-color: transparent;
