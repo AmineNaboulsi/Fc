@@ -69,6 +69,10 @@ header{
   animation: displayloadingF 1s;
 
 }
+.tt{
+  transform:
+    scale(0.9) ;
+}
 .terain {
   width: 892px;
   height: 731px;
@@ -87,7 +91,9 @@ header{
 
   /* background-color: #39337bdf; */
 }
-
+#subpanel{
+  backdrop-filter: blur(15px);
+}
 
 
 /* .terain:hover{
@@ -103,15 +109,26 @@ header{
 
 }
 
+
+
 @media (max-width: 1200px) {
   /* .containersplited{
     grid-template-columns: 1fr;
     /* transform: scale(0.5); 
   } */
-  /* .tt {
+   #ttparent{
+    overflow: hidden;
+   }
+  .tt {
     transform:
-    scale(0.5) ;
-  } */
+    scale(0.6) ;
+    transform-origin: top left;
+    left: -8%;
+  } 
+  #changement{
+    display: fixed;
+    bottom: 0;
+  }
 }
 
 @media (min-width: 768px) {

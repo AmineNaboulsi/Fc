@@ -119,6 +119,14 @@ function onchangeformation(){
     }
     console.log(formations)
 }
+
+function changementOpen(e){
+    e.currentTarget.getAttribute("isopned")=="true"?(
+        e.currentTarget.offsetParent.style.height = '5%',
+        e.currentTarget.setAttribute("isopned" , "false")
+    ) : (e.currentTarget.offsetParent.style.height = 'auto' ,
+    e.currentTarget.setAttribute("isopned" , "true"))
+}
 function OpenFormationMenu(){
     const formations = document.getElementById('formations')
     const formationcontent = document.getElementById('formationcontent')
@@ -277,7 +285,7 @@ function AddPlaperPanel(data  , pn , post , isOnterain){
     })
 
     document.getElementById("playerspanel").innerHTML = `
-        <div class=" w-full py-5 px-6 h-96" >
+        <div class=" w-full py-5 px-6 h-96  max-md:h-[70vh]" >
             <div class="flex justify-between">
             <h3 class=" text-gray-100">Players</h3>
                 <i class="fa-solid fa-xmark text-white cursor-pointer" onclick="ClosePanlePlayers()"></i>
@@ -311,7 +319,6 @@ function PickedPlayer(playerObject , pn ,id,isOnterain){
             })
             element.addEventListener("mouseleave",()=>{
                 element.style.filter = 'none';
-                
             })
             element.setAttribute("onclick" , `PickPlayer(${id},false)`)
             element.setAttribute("id" ,`img${Subplayer.length+1}` )
@@ -344,6 +351,7 @@ function PickedPlayer(playerObject , pn ,id,isOnterain){
         
     }
     else{
+        ClosePanlePlayers()
         const Card = document.getElementById(`img${pn}`);
         Card.innerHTML += 
         `

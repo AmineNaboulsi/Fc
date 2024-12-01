@@ -48,19 +48,23 @@
     </section> -->
     <section class="mt-16">
         <div class="container">
-            <div class="grid grid-cols-[1fr,500px] max-md:grid-cols-[1fr]">
-                <div class="h-full grid ">
+            <div class="grid grid-cols-[1fr,30%] max-md:grid-cols-[1fr]">
+                <div id="ttparent" class="h-full grid ">
                     <div class="tt flex relative">
                         <div class="terain"></div>
-                        <h2 id="flabelfp" class="terainf text-5xl text-white absolute bottom-4 right-[16%]">4-4-6</h2>
+                        <h2 id="flabelfp" class="terainf text-5xl text-white absolute bottom-4 right-[16%]">4-4-2</h2>
                         <div id="canvas" class="absolute h-[731px] w-[892px]"></div>
                     </div>
                   
-                    <div class=" mt-2 ">
-                        <div class="border-b-[1px] border-gray-400 flex justify-end">
-                            <span id="subnumber" class="text-gray-400">0/5</span>
+                    <div id="changement" class="max-md:z-[1] relative transition-all max-md:fixed max-md:h-[190px] overflow-y-auto bottom-0 right-0 left-0 mt-2 ">
+                        <div onclick="changementOpen(event)" isopned="true" class="absolute -top-3 left-0 flex justify-center right-0 p-2 rounded-full z-[105] rotate-180">
+                             <i id="iconchangement"
+                                    class="fa-solid fa-chevron-down text-white cursor-pointer transition-all"></i>
                         </div>
-                        <div id="subpanel" class="flex flex-row-reverse">
+                        <div class="border-b-[1px] border-gray-400 flex justify-end overflow-auto">
+                            <span id="subnumber" class="text-gray-400 mr-2">0/5</span>
+                        </div>
+                        <div id="subpanel" class="transition-all flex flex-row flex-wrap overflow-x-auto ">
                             <div class="relative element" id="cardtoadd" style="transition: 0.5s;filter: none;"><img id="imgcover9" src="./Assets/image.png" class="h-40 " alt="">
                                 <div onclick="AddSubs()" class="absolute inset-0 flex justify-center items-center">
                                     <div class="relative text-gray-400 text-2xl cursor-pointer">
@@ -92,9 +96,9 @@
                     </div>
                 </div>
     
-                <div class="w-full flex flex-col gap-2 px-6 pt-16">
-                    <div id="formations" ipOpened="false"
-                        class="border-[#3C4053] rounded-md border-2 w-full py-5 px-10 transition-all">
+                <div class=" w-full flex flex-col gap-2 px-6 pt-16 ">
+                    <div id="formations" ipOpened="false" 
+                        class="border-[#3C4053] rounded-md border-2 w-full py-5 px-10 transition-all max-md:-translate-y-56 max-md:z-[0]">
                         <div class="flex justify-between items-center" onclick="OpenFormationMenu()">
                             <h3 class=" text-gray-100 select-none cursor-pointer">Formations</h3>
                             <i id="formationicon"
@@ -105,7 +109,8 @@
                     <div id="playerinfo" >
                         
                     </div>
-                    <div id="playerspanel" class="border-[#3C4053] rounded-md border-2 overflow-y-auto">
+                    <div id="playerspanel" 
+                    class="border-[#3C4053] min-md:border-2 max-md:bg-[#3C4053] max-md:border-transparent rounded-md  overflow-y-auto max-md:fixed top-[20%] left-4 right-4  ">
                         
                     </div>
     
@@ -114,11 +119,11 @@
             
         </div>
     </section>
-    <div class="fixed bottom-5 right-5 h-20 w-20 rounded-full grid justify-center items-center bg-white ">
+    <div class="hidden  md:hidden fixed top-[80vh] right-5 h-20 w-20 rounded-full grid justify-center items-center bg-white ">
         <img class="cursor-pointer  h-16 w-16  opacity-60 " src="./Assets/football.png" />
     </div>
     <div class="">
-        test
+        .
     </div>
     <footer>
         footer
