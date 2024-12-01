@@ -86,6 +86,11 @@ const DefaultPositions = () =>{
     });
 }
 DefaultPositions();
+
+localStorage.getItem("fp") && (document.getElementById('flabelfp').textContent = parseInt(localStorage.getItem("fp")) == 0 ? '4-3-3' : '4-4-2' );
+
+
+
 let players = [];
 
 for (let index = 0; index <= 11 ; index++) {
@@ -96,7 +101,9 @@ for (let index = 0; index <= 11 ; index++) {
 function onchangeformation(){
     const tt = document.getElementById("formationtaktik").value;
     tt && localStorage.setItem("fp",tt) 
-    tt && (formationPicked = Number(tt));
+    tt && (formationPicked = Number(tt) );
+
+    document.getElementById('flabelfp').textContent = tt == 0 ? '4-3-3' : '4-4-2' ;
     
     formations.forEach((taktik,i)=>{
         i!=formationPicked && taktik.forEach((item,p)=>{

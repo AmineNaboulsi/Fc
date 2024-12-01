@@ -44,6 +44,31 @@ header{
   }
 }
 
+@keyframes displayloadingF{
+  0%{
+    transform:
+    rotateX(0deg) ;
+    opacity: 0;
+  }
+  50%{
+    transform:
+    rotateX(0deg) ;
+    opacity: 0;
+  }
+  100%{
+    transform:
+    rotateX(40deg) ;
+    opacity: 1;
+  }
+}
+.terainf{
+  opacity: 0.3;
+  filter: grayscale(1);
+  transform:
+  rotateX(40deg) ;
+  animation: displayloadingF 1s;
+
+}
 .terain {
   width: 892px;
   height: 731px;
