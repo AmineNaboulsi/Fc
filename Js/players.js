@@ -212,6 +212,11 @@ function checkfiledrequied(PlayerData , mode){
   
   PlayerData.name=="" ? (document.getElementById('textNamelabel').textContent = '*', Findtrouble = true)
   :document.getElementById('textNamelabel').textContent = ''
+
+  PlayerData.name=="" || !regex(PlayerData.name) ? (document.getElementById('textNamelabel').textContent = '*', Findtrouble = true)
+  :document.getElementById('textNamelabel').textContent = ''
+
+  
   if(imageFile == null && mode == 0){
     document.getElementById('imagepanelR').textContent = '*' ; Findtrouble = true ;
   }
@@ -221,7 +226,10 @@ function checkfiledrequied(PlayerData , mode){
   // :document.getElementById('imagepanelR').textContent = ''
   return !Findtrouble
 }
-
+function regex(checking){
+  let namePattern = /^[a-zA-Z\s]+$/
+  return namePattern.test(checking)
+}
 const input = document.querySelectorAll("#fileInput");
 input.forEach((input)=>{
   input.addEventListener("change", (event) => {
