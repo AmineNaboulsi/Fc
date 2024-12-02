@@ -33,12 +33,12 @@
     "name":"Liverpool"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/10.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=95cbb451617b845465701b79e8fbc3a7",
+        "img":"https://cdn.sofifa.net/players/239/085/25_120.png",
     "name":"Manchester City"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/11.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=d634f823d355069c2550a1af0508d0b6",
-    "name":"Manchester Utd"
+        "img":"https://cdn.sofifa.net/meta/team/14/120.png",
+    "name":"Manchester United"
  },
  {
         "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/12.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=eb3c0797374a7c91fad6d492d2a44cf9",
@@ -69,8 +69,8 @@
     "name":"West Ham"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/21.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=e3b8047ca7192b7dcb2ea63bd0d03ce8",
-    "name":"FC Bayern München"
+        "img":"https://cdn.sofifa.net/meta/team/503/120.png",
+    "name":"Bayern Munich"
  },
  {
         "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/22.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=610202ab57221514d872d7c05d922e1e",
@@ -201,7 +201,7 @@
     "name":"OGC Nice"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/73.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=0f38a396c70909e8d42f5c5df7106dfc",
+        "img":"https://cdn.sofifa.net/meta/team/591/120.png",
     "name":"Paris SG"
  },
  {
@@ -413,8 +413,8 @@
     "name":"Sporting CP"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/240.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=c11cce2f95472cd8029518f50f33b072",
-    "name":"Atlético de Madrid"
+        "img":"https://cdn.sofifa.net/meta/team/7980/120.png",
+    "name":"Atletico Madrid"
  },
  {
         "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/241.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=2e69666cf40b727b95e8a7d9c6f826c0",
@@ -425,7 +425,7 @@
     "name":"RC Deportivo"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/243.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=bb98e3479ba0959fdb7031ce0834fc3f",
+        "img":"https://cdn.sofifa.net/meta/team/3468/120.png",
     "name":"Real Madrid"
  },
  {
@@ -441,7 +441,7 @@
     "name":"Feyenoord"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/247.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=0d85863a2e4dfc5122b8a8caf131fc0f",
+        "img":"https://cdn.sofifa.net/meta/team/682/120.png",
     "name":"PSV"
  },
  {
@@ -557,7 +557,7 @@
     "name":"Galatasaray"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/326.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=d16167aff13c66e43d6ca9bf9df366e3",
+        "img":"https://cdn.sofifa.net/meta/team/88/120.png",
     "name":"Fenerbahçe"
  },
  {
@@ -785,12 +785,12 @@
     "name":"São Paulo"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/605.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=0adb71c2b270bd862ec4b2052cac71d0",
-    "name":"Al Hilal"
+        "img":"https://cdn.sofifa.net/meta/team/7011/120.png",
+    "name":"Al-Hilal"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/607.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=d1375bef08873eae1bd45879d3a2c1ef",
-    "name":"Al Ittihad"
+        "img":"https://cdn.sofifa.net/meta/team/476/120.png",
+    "name":"Al-Ittihad"
  },
  {
         "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/614.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=a479e5d6341665a174b8107f36db88b0",
@@ -2205,7 +2205,7 @@
     "name":"Nacional"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/111326.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=fdff2da631ee60aa36d66cc07db77030",
+        "img":"https://cdn.sofifa.net/meta/team/8/120.png",
     "name":"Liverpool"
  },
  {
@@ -2373,7 +2373,7 @@
     "name":"Monza"
  },
  {
-        "img":"https://cdn3.futbin.com/content/fifa25/img/clubs/dark/111817.png?fm=png&amp;ixlib=java-2.1.0&amp;verzion=2&amp;w=256&amp;s=98988cfaa363dd6f413fe1d7107fef5f",
+        "img":"https://cdn.sofifa.net/meta/team/591/120.png",
     "name":"Paris FC"
  },
  {
@@ -2421,7 +2421,7 @@
     "name":"Philadelphia"
  },
  {
-        "img":"https://cdn.sofifa.net/flags/pt.png",
+        "img":"https://cdn.sofifa.net/meta/team/2506/120.png",
     "name":"Al Nassr"
  },
  {
